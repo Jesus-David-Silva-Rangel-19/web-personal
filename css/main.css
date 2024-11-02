@@ -2081,13 +2081,20 @@ textarea.form-control {
   .progress-container .progress-badge {
     color: #888;
     font-size: 0.8571em;
-    text-transform: uppercase; }
+    font-variant: small-caps;
+    font-family: Oldenburg;
+    font-weight: bolder;
+    font-size: 17px;
+  }
   .progress-container .progress {
     height: 1px;
     border-radius: 0;
     box-shadow: none;
     background: rgba(222, 222, 222, 0.8);
-    margin-top: 14px; }
+    margin-top: 14px; 
+    font-family: Oldenburg;
+    font-weight: bolder;
+    }
     .progress-container .progress .progress-bar {
       box-shadow: none;
       background-color: #888; }
