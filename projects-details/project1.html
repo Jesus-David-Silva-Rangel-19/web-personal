@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor Digital de Presión Arterial (MDPA) - Detalles del Proyecto</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css">
+    
+    <!--Link de mas frameworks para estilizar-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl.carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl.carousel/1.3.3/owl.theme.default.min.css">
+
+    <!--Link de mas frameworks para un apariencia estetica y moderna-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl.carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl.carousel/1.3.3/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/3.0.0-alpha.2/css/bootstrap-colorpicker.min.css">
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+   <style>
+    /* Custom CSS */
+    .project-details {
+        background-color: #f8f9fa;
+    }
+    .carousel-inner img {
+        border: 6px solid black;
+        border-radius: 20px;
+        height: 450px; /* Ajustar la altura de las imágenes del carrusel */
+        object-fit: cover; /* Mantener la proporción de las imágenes */
+    }
+    .project-details .card {
+        background-color: #fff;
+        height: 10%;
+    }
+    .project-details .card-title {
+        color: #333;
+    }
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    footer p {
+       color: #ffffff;
+    }
+
+    /* Aplicar estilos de los nuevos frameworks */
+    .owl-carousel .owl-item img {
+        border-radius: 20px;
+    }
+    .owl-carousel .owl-item img:hover {
+        transform: scale(1.1);
+    }
+    footer {
+        background-color: #333;
+        color: #ffffff;
+        padding: 20px;
+    }
+    .badge {
+        font-size: 0.9rem;
+    }
+    .btn-outline-danger {
+        color: #dc3545;
+        border-color: #dc3545;
+    }
+    .btn-outline-danger:hover {
+        color: #fff;
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+    .btn-outline-danger:focus {
+        box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.5);
+    }
+    .btn-outline-danger:active {
+        color: #fff;
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+
+    /* Evitar que el span de las tecnologias desborde */
+    .d-flex span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 150px;
+    }
+
+
+   </style> 
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success ">
+    <div class="container">
+        <a class="navbar-brand" href="#" style="font-variant: small-caps;">Proyecto MDPA-101</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="../index.html">Inicio</a>
+                </li>
+                <!--Divisor-->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">|</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Siguiente</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Project Details -->
+<section class="project-details py-5">
+    <div class="container">
+        <h1 class="text-center mb-4" data-aos="fade-down"><i class="fa fa-heartbeat text-danger"></i> Monitor Digital de Presión Arterial (MDPA)</h1>
+
+        <div class="row">
+            <!-- Carrusel de imágenes a la izquierda -->
+            <div class="col-md-6">
+                <div id="mediaCarousel" class="carousel slide" data-bs-ride="carousel" data-aos="zoom-in">
+                    <div class="carousel-inner">
+                        <!-- Imagen 1 -->
+                        <div class="carousel-item active">
+                            <img src="/projects-details/p1v.png" class="d-block w-100" alt="Interfaz MDPA">
+                        </div>
+                        <!-- Imagen 2 -->
+                        <div class="carousel-item">
+                            <img src="/projects-details/img-IMC-Calculator.png" class="d-block w-100" alt="Gráficos en tiempo real">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#mediaCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Atrás</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#mediaCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Notas sobre el proyecto a la izquierda -->
+            <div class="col-md-6">
+                <div class="card shadow-lg border-4 h-100">
+                    <div class="card-body p-4">
+                        <h2 class="card-title
+                        ">Notas del Proyecto</h2>
+                        <p class="card-text">El Monitor Digital de Presión Arterial (MDPA) es una aplicación web en tiempo real para el monitoreo de la presión arterial. La aplicación permite a los usuarios monitorear su presión arterial en tiempo real, ver gráficos interactivos, recibir alertas personalizadas y generar reportes.</p>
+                        <p class="card-text">El MDPA fue desarrollado por Jesús David Silva Rangel, un Científico De Datos e Ingeniero de Machine Learning de Colombia. El proyecto fue desarrollado utilizando Python, Machine Learning, JavaScript, Flask, Bootstrap, Chart.js, HTML y CSS.</p>
+                        <p class="card-text">El MDPA es un proyecto innovador que utiliza tecnologías modernas para ayudar a las personas a monitorear su presión arterial de forma segura y eficaz.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Divisor -->
+            <div class="col-md-12 text-center my-4">
+                <hr>
+            </div>
+
+            <!-- Detalles del proyecto a la derecha -->
+            <div class="col-md-6">
+                <div class="card shadow-lg border-4 h-100">
+                    <div class="card-body p-4">
+                        <h2 class="card-title">Detalles del Proyecto</h2>
+                        <ul class="list-unstyled">
+                            <li>
+                                <i class="fa fa-solid fa-code icon-color"></i>
+                                <strong> Proyecto:</strong> MDPA-W101
+                            </li>
+                            <li>
+                                <i class="fa fa-solid fa-calendar icon-color"></i>
+                                <strong> Fecha:</strong> 3 de noviembre de 2024
+                            </li>
+                            <li>
+                                <i class="fa fa-solid fa-map-marker-alt icon-color"></i>
+                                <strong> Ubicación:</strong> Colombia
+                            </li>
+                            <li>
+                                <i class="fa fa-solid fa-user icon-color"></i>
+                                <strong> Desarrollador:</strong> Jesús David Silva Rangel
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-gear icon-color"></i>
+                                <strong> Rol:</strong> Desarrollador Full-Stack
+                            </li>
+                        </ul>
+
+                        <h3 class="mt-4">Descripción</h3>
+                        <p>El MDPA es una aplicación web en tiempo real para el monitoreo de presión arterial.</p>
+                        <h3 class="mt-4">Características</h3>
+                        <ul class="list-unstyled">
+                            <li>
+                            <i class="fa fa-check icon-color"></i>    
+                            Monitoreo en tiempo real</li>
+
+                            <li>
+                            <i class="fa fa-solid fa-chart-line icon-color"></i>
+                             Gráficos interactivos</li>
+
+                            <li>
+                            <i class="fa fa-solid fa-warning icon-color"></i>
+                                Alertas personalizadas</li>
+                            <li> 
+                            <i class="fa fa-solid fa-file icon-color"></i>
+                            Generación de reportes</li>
+                        </ul>
+
+                        <h3 class="mt-4">Etiquetas</h3>
+                        <div class="d-flex gap-2 mt-3">
+                            <span class="badge bg-primary" title="Python">Python</span>
+                            <span class="badge bg-secondary" title="Machine Learning">Machine Learning</span>
+                            <span class="badge bg-info" title="JavaScript">JavaScript</span>
+                            <span class="badge bg-success" title="Flask">Flask</span>
+                            
+                            <span class="badge bg-warning" title="Bootstrap">Bootstrap</span>
+                            <span class="badge bg-danger" title="Chart.js">Chart.js</span>
+                            <span class="badge bg-dark" title="HTML">HTML</span>
+                            <span class="badge bg-light text-dark" title="CSS">CSS</span>
+                        </div>
+
+                        
+                        <button id="learnMoreBtn" class="btn btn-outline-danger mt-4"><i class="fa fa-info-circle"></i> Más Información</button>
+                       
+                        <!--Visitar sitio web del proyecto-->
+                        <a href="https://jesus-david-silva-rangel-19.github.io/Monitor-Blood-Pressure/" class="btn btn-outline-danger mt-4"><i class="fa fa-globe"></i> Visitar Sitio Web</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sección de problemas que resuelve el proyecto a la derecha -->
+            <div class="col-md-6">
+                <div class="card shadow-lg border-4 h-100">
+                    <div class="card-body p-4">
+                        <h2 class="card-title
+                        "><i class="fa fa-solid fa-triangle-exclamation text-warning"></i> Problema que Resuelve</h2>
+                        <p class="card-text">El MDPA resuelve el problema de monitoreo de la presión arterial en tiempo real. La aplicación permite a los usuarios monitorear su presión arterial de forma segura y eficaz.</p>
+                        <h2 class="card-title
+                        "><i class="fa fa-solid fa-award text-info"></i> Motivación</h2>
+                        <p class="card-text">La motivación detrás del MDPA es ayudar a las personas a monitorear su presión arterial de forma segura y eficaz. La aplicación utiliza tecnologías modernas para proporcionar a los usuarios una experiencia de monitoreo de presión arterial de alta calidad.</p>
+                        <h2 class="card-title
+                        "><i class="fa fa-solid fa-stopwatch text-secondary"></i> Solución</h2>
+                        <p class="card-text">El MDPA utiliza tecnologías modernas como la inteligencia artificial y la tecnología de puente para proporcionar a los usuarios una experiencia de monitoreo de presión arterial de alta calidad.</p>
+                        <h2 class="card-title
+                        "><i class="fa fa-solid fa-user-graduate  text-danger"></i> Desarrollado por</h2>
+                        <p class="card-text">Jesús David Silva Rangel, un Científico de Datos e Ingeniero de Machine Learning de Colombia.</p> 
+                        <h2 class="card-title
+                        "> <i class="fa fa-solid fa-circle-info text-success "></i> Código Abierto</h2> 
+                        <p class="card-text">El MDPA es un proyecto de código abierto bajo la licencia MIT.</p>
+        </div>
+    </div>
+</section>
+
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-"> -->
+
+
+<!--Seccion de problema que resuelve el proyecto y motivación de la creación a la derecha -->
+
+
+<!-- Sección de Tecnologías -->
+<section class="technologies py-5">
+    <div class="container">
+        <h2 class="text-center section-title" data-aos="fade-down"><i class="fa fa-cogs text-danger"></i> Tecnologías</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card shadow-lg border-4">
+                    <div class="card-body text-center" style="align-content: center; justify-items: center; justify-content: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width=100" height="100" preserveAspectRatio="xMinYMin meet" viewBox="0 0 256 255" id="python">
+                            <defs>
+                              <linearGradient id="a" x1="12.959%" x2="79.639%" y1="12.039%" y2="78.201%">
+                                <stop offset="0%" stop-color="#387EB8"></stop>
+                                <stop offset="100%" stop-color="#366994"></stop>
+                              </linearGradient>
+                              <linearGradient id="b" x1="19.128%" x2="90.742%" y1="20.579%" y2="88.429%">
+                                <stop offset="0%" stop-color="#FFE052"></stop>
+                                <stop offset="100%" stop-color="#FFC331"></stop>
+                              </linearGradient>
+                            </defs>
+                            <path fill="url(#a)" d="M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631S.145 61.355.145 126.77c0 65.417 36.21 63.097 36.21 63.097h21.61v-30.356s-1.165-36.21 35.632-36.21h61.362s34.475.557 34.475-33.319V33.97S194.67.072 126.916.072zM92.802 19.66a11.12 11.12 0 0 1 11.13 11.13 11.12 11.12 0 0 1-11.13 11.13 11.12 11.12 0 0 1-11.13-11.13 11.12 11.12 0 0 1 11.13-11.13z"></path>
+                            <path fill="url(#b)" d="M128.757 254.126c64.832 0 60.784-28.115 60.784-28.115l-.072-29.127H127.6v-8.745h86.441s41.486 4.705 41.486-60.712c0-65.416-36.21-63.096-36.21-63.096h-21.61v30.355s1.165 36.21-35.632 36.21h-61.362s-34.475-.557-34.475 33.32v56.013s-5.235 33.897 62.518 33.897zm34.114-19.586a11.12 11.12 0 0 1-11.13-11.13 11.12 11.12 0 0 1 11.13-11.131 11.12 11.12 0 0 1 11.13 11.13 11.12 11.12 0 0 1-11.13 11.13z"></path>
+                          </svg>
+                        <h3 class="card-title mt-3">Python</h3>
+                        <p class="card-text">Python es un lenguaje de programación de alto nivel, interpretado y de propósito general.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow-lg border-4">
+                    <div class="card-body text-center" style="align-content: center; justify-items: center; justify-content: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" preserveAspectRatio="xMinYMin meet" viewBox="0 0 256 256" id="javascript">
+                            <path fill="#F7DF1E" d="M0 0h256v256H0V0z"></path>
+                            <path d="M67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371 7.905 0 12.89-3.092 12.89-15.12v-81.798h24.057v82.138c0 24.917-14.606 36.259-35.916 36.259-19.245 0-30.416-9.967-36.087-21.996M152.381 211.354l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607 9.969 0 16.325-4.984 16.325-11.858 0-8.248-6.53-11.17-17.528-15.98l-6.013-2.58c-17.357-7.387-28.87-16.667-28.87-36.257 0-18.044 13.747-31.792 35.228-31.792 15.294 0 26.292 5.328 34.196 19.247L210.29 147.43c-4.125-7.389-8.591-10.31-15.465-10.31-7.046 0-11.514 4.468-11.514 10.31 0 7.217 4.468 10.14 14.778 14.608l6.014 2.577c20.45 8.765 31.963 17.7 31.963 37.804 0 21.654-17.012 33.51-39.867 33.51-22.339 0-36.774-10.654-43.819-24.574"></path>
+                          </svg>
+                        <h3 class="card-title
+                        mt-3">JavaScript</h3>
+                        <p class="card-text">JavaScript es un lenguaje de programación interpretado y de alto nivel.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow-lg border-4">
+                    <div class="card-body text-center" style="align-content: center; justify-items: center; justify-content: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" aria-label="HTML5" viewBox="0 0 512 512" id="html">
+                            <path fill="#e34f26" d="M71 460L30 0h451l-41 460-185 52"></path>
+                            <path fill="#ef652a" d="M256 472l149-41 35-394H256"></path>
+                            <path fill="#ebebeb" d="M256 208h-75l-5-58h80V94H114l15 171h127zm-1 147l-63-17-4-45h-56l7 89 116 32z"></path>
+                            <path fill="#fff" d="M255 208v57h70l-7 73-63 17v59l116-32 16-174zm0-114v56h137l5-56z"></path>
+                          </svg>
+                        <h3 class="card-title
+                        mt-3">HTML</h3>
+                        <p class="card-text">HTML es el lenguaje de marcado utilizado para crear documentos web.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow-lg border-4">
+                    <div class="card-body text-center" style="align-content: center; justify-items: center; justify-content: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" preserveAspectRatio="xMidYMid" viewBox="0 0 256 361" id="css">
+                            <path fill="#264DE4" d="M127.844 360.088L23.662 331.166.445 70.766h255.11l-23.241 260.36-104.47 28.962z"></path>
+                            <path fill="#2965F1" d="M212.417 314.547l19.86-222.49H128V337.95l84.417-23.403z"></path>
+                            <path fill="#EBEBEB" d="M53.669 188.636l2.862 31.937H128v-31.937H53.669zM47.917 123.995l2.903 31.937H128v-31.937H47.917zM128 271.58l-.14.037-35.568-9.604-2.274-25.471h-32.06l4.474 50.146 65.421 18.16.147-.04V271.58z"></path>
+                            <path d="M60.484 0h38.68v16.176H76.66v16.176h22.506v16.175H60.484V0zM106.901 0h38.681v14.066h-22.505v2.813h22.505v32.352h-38.68V34.46h22.505v-2.813H106.9V0zM153.319 0H192v14.066h-22.505v2.813H192v32.352h-38.681V34.46h22.505v-2.813H153.32V0z"></path>
+                            <path fill="#FFF" d="M202.127 188.636l5.765-64.641H127.89v31.937h45.002l-2.906 32.704H127.89v31.937h39.327l-3.708 41.42-35.62 9.614v33.226l65.473-18.145.48-5.396 7.506-84.08.779-8.576z"></path>
+                          </svg>
+                        <h3 class="card-title
+                        mt-3">CSS</h3>
+                        <p class="card-text">CSS es un lenguaje de estilo en cascada utilizado para dar estilo a documentos web.</p>
+                    </div>
+                </div>
+            </div>                        
+        </div>
+    </div>
+</section>
+
+
+
+<section class="technologies py-5">
+    <!-- Seccion de los objetivos para el proyecto a la derecha -->
+    <div class="container">
+        <h2 class="text-center section-title" data-aos="fade-down"><i class="fa fa-bullseye text-danger"></i> Objetivos</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card shadow-lg border-4">
+                    <div class="card-body p-4">
+                        <h3 class="card-title
+                        "><i class="fa fa-solid fa-circle-check text-success"></i> Objetivo 1</h3>
+                        <p class="card-text">Crear una página web responsive con un diseño elegante y accesible.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow-lg border-4">
+                    <div class="card-body p-4">
+                        <h3 class="card-title
+                        "><i class="fa fa-solid fa-circle-check text-success"></i> Objetivo 2</h3>
+                        <p class="card-text">Implementar una estructura de datos en JavaScript para almacenar y manipular información.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow-lg border-4">
+                    <div class="card-body p-4">
+                        <h3 class="card-title
+                        "><i class="fa fa-solid fa-circle-check text-success"></i> Objetivo 3</h3>
+                        <p class="card-text">Utilizar CSS para dar estilo a la página web.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow-lg border-4">
+                    <div class="card-body p-4">
+                        <h3 class="card-title
+                        "><i class="fa fa-solid fa-circle-check text-success"></i> Objetivo 4</h3>
+                        <p class="card-text">Implementar animaciones y interacciones en la página web.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Información de contacto y redes sociales con los iconos grande en una sola carta -->
+<section class="contact-info py-5">
+    <div class="container">
+        <h2 class="text-center section-title" data-aos="fade-down"><i class="fa fa-address-card text-danger"></i> Información de Contacto</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card shadow-lg border-4">
+                    <div class="card-body p-4">
+                        <h3 class="card-title
+                        "><i class="fa fa-envelope text-primary"></i> Correo Electrónico</h3>
+                        <p class="card-text">
+                            <a href="mailto:
+                            jesus.david.silva@gmail.com">jdsr.cuentapersonal.@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow-lg border-4">
+                    <div class="card-body p-4">
+                        <h3 class="card-title
+                        "><i class="fa fa-phone text-success"></i> Teléfono</h3>
+                        <p class="card-text">
+                            (+57) 322 960 8830.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow-lg border-4">
+                    <div class="card-body p-4">
+                        <h3 class="card-title
+                        "><i class="fa fa-location-arrow text-warning"></i> Dirección</h3>
+                        <p class="card-text">
+                            Calle 4 #1-86, Barrio Colorado, Tamalameque, Cesar.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow-lg border-4">
+                    <div class="card-body p-4">
+                        <h3 class="card-title
+                        "><i class="fa fa-share-alt text-danger"></i> Redes Sociales</h3>
+                        <p class="card-text">
+                            <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin fa-2x text-primary"></i></a>
+                            <a href="#" target="_blank" title="GitHub "><i class="fab fa-github fa-2x text-dark"></i></a>
+                            <a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter fa-2x text-info"></i></a>
+                            <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram fa-2x text-danger"></i></a>
+                        
+                            <a href="#" target="_blank" title="YouTube"><i class="fab fa-youtube fa-2x text-danger"></i></a>
+                            <a href="#" target="_blank" title="Medium"><i class="fab fa-medium fa-2x text-dark"></i></a>
+                            <a href="#" target="_blank" title="Kaggle"><i class="fab fa-kaggle fa-2x text-info"></i></a>
+                            <a href="#" target="_blank" title="Reddit"><i class="fab fa-reddit fa-2x text-dark"></i></a>
+                            <a href="#" target="_blank" title="Google Scholar"><i class="fab fa-google-scholar fa-2x text-dark"></i></a>
+                            <a href="#" target="_blank" title="Stack Overflow"><i class="fab fa-stack-overflow fa-2x text-dark"></i></a>
+                            <a href="#" target="_blank" title="LeetCode"><i class="fab fa-leetcode fa-2x text-dark"></i></a>
+                            <a href="#" target="_blank" title="CodePen"><i class="fab fa-codepen fa-2x text-dark"></i></a>
+                            <a href="#" target="_blank" title="Dev.to"><i class="fab fa-dev
+                            fa-2x text-dark"></i></a>
+                            <a href="#" target="_blank" title="Codecademy"><i class="fab fa-codecademy fa-2x text-dark"></i></a>
+                            <a href="#" target="_blank" title="Coursera"><i class="fab fa-coursera fa-2x text-dark"></i></a>
+                            <!--Discord-->
+                            <a href="#" target="_blank" title="Discord"><i class="fab fa-discord fa-2x text-dark"></i></a>
+                            <!--WhatsApp-->
+                            <a href="#" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp fa-2x text-success"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-4 bg-success">
+    <p class="mb-0">&copy; 2024 Jesús David Silva Rangel - Todos los derechos reservados.</p>
+</footer>
+
+<!-- Bootstrap JS, SweetAlert2, y AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

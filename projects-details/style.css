@@ -14,13 +14,37 @@
  @import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
 
 body {
-    font-family: 'Kdam Thmor Pro';
-    background-color: #f8f9fa;
+    font-family: 'Belgrano', serif;
+    background-color: #f8faf8;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Protest Strike';
     font-variant: small-caps;
+}
+
+h1 {
+    font-size: 46px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 18px;
 }
 
 .navbar-brand {
@@ -33,7 +57,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card {
-    border-radius: 12px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-title {
@@ -46,16 +71,40 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-h3 {
-    color: #555;
-}
-
 ul.list-unstyled li {
     font-size: 1rem;
-    color: #666;
+
 }
 
 .badge {
     font-size: 0.9rem;
     padding: 0.5em 1em;
+}
+
+.btn {
+    font-family: 'Patua One';
+    font-variant: small-caps;
+    font-weight: bolder;
+}
+
+
+.icon-color {
+    color: inherit; 
+    width: 24px; /* Tamaño del icono */
+    text-align: center; 
+    font-size: 1.2em; 
+}
+
+.icon-color:hover {
+    color: #dc3545;
+}
+
+footer p {
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+a {
+    font-variant: small-caps;
+    font-weight: bolder;
 }

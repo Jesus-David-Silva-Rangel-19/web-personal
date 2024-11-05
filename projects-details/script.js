@@ -7,3 +7,7 @@ document.getElementById('learnMoreBtn').addEventListener('click', function() {
         confirmButtonColor: '#d9534f'
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    AOS.init(); // Inicializar AOS
+});
